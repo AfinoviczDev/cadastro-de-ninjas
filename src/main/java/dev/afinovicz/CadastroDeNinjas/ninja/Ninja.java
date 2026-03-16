@@ -1,6 +1,9 @@
-package dev.afinovicz.CadastroDeNinjas.model;
+package dev.afinovicz.CadastroDeNinjas.ninja;
 
+import dev.afinovicz.CadastroDeNinjas.missoes.Missoes;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_ninja")
@@ -13,6 +16,11 @@ public class Ninja {
     private String nome;
     private String email;
     private Integer idade;
+
+    // @ManyToOne um ninja tem uma unica missao
+    @ManyToOne
+    @JoinColumn(name = "missao_id") // CHAVE ESTRANGEIRA
+    private Missoes missao;
 
     public Ninja() {
     }
