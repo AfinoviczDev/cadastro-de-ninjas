@@ -1,9 +1,6 @@
 package dev.afinovicz.CadastroDeNinjas.missoes;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +22,10 @@ public class MissoesController {
     @GetMapping("/listar/{id}")
     public Missoes listarMissoesPorId(@PathVariable Long id) {
         return missoesService.listarMissoesById(id);
+    }
+
+    @PostMapping("/criar")
+    public Missoes criarMissao(@RequestBody Missoes missao) {
+        return missoesService.criarMissao(missao);
     }
 }
