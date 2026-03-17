@@ -20,6 +20,8 @@ public class Ninja {
     @Column(unique = true)
     private String email;
 
+    private String rank;
+
     @Column(name = "img_url")
     private String imgUrl;
 

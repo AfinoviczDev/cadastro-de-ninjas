@@ -1,5 +1,6 @@
 package dev.afinovicz.CadastroDeNinjas.missoes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.afinovicz.CadastroDeNinjas.ninja.Ninja;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -23,6 +24,7 @@ public class Missoes {
 
     // Uma missao pode ter varios ninjas associados
     @OneToMany(mappedBy = "missao")
+    @JsonIgnore
     private List<Ninja> ninja;
 
 }
