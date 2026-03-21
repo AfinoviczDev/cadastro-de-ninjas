@@ -33,4 +33,9 @@ public class MissoesController {
     public void deletarMissaoPorId(@PathVariable Long id) {
         missoesService.deletarMissaoPorId(id);
     }
+
+    @PutMapping("alterar/{id}")
+    public Missoes atualizarMissaoPorId(@PathVariable Long id, @RequestBody Missoes missoes) {
+        missoesService.atualizarMissaoPorId(id, missoes);
+    }
 }
