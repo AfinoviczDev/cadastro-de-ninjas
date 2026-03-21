@@ -28,4 +28,8 @@ public class MissoesService {
         return missoesRepository.save(missao);
     }
 
+    public void deletarMissaoPorId(Long id) {
+        missoesRepository.deleteById(id);
+    }
+
 }
