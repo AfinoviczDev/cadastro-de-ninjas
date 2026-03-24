@@ -27,8 +27,8 @@ public class NinjaController {
     }
 
     @PostMapping("/criar")
-    public Ninja criarNinja(@RequestBody Ninja ninja) {
-        return ninjaService.criarNinja(ninja);
+    public NinjaDTO criarNinja(@RequestBody NinjaDTO ninjaDTO) {
+        return ninjaService.criarNinja(ninjaDTO);
     }
 
     @DeleteMapping("/deletar/{id}")
