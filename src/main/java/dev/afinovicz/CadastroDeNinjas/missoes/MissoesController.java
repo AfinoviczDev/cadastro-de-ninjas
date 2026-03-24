@@ -36,6 +36,6 @@ public class MissoesController {
 
     @PutMapping("alterar/{id}")
     public Missoes atualizarMissaoPorId(@PathVariable Long id, @RequestBody Missoes missoes) {
-        missoesService.atualizarMissaoPorId(id, missoes);
+       return missoesService.atualizarMissaoPorId(id, missoes);
     }
 }
